@@ -19,6 +19,15 @@ if [ ! -e ~/apps/node ]; then
   mv node-* node
 fi
 
+if [ ! -e ~/.cargo]; then
+  mkdir -p ~/apps
+  cd ~/apps
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -o rustup-install.sh
+  chmod +x rustup-install.sh
+  ./rustup-install.sh -y
+  rm rustup-install.sh
+fi
+
 # set git stuff
 git config --global user.name "Daniel Javorszky"
 git config --global user.email daniel.javorszky@gmail.com
