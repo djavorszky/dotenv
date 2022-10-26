@@ -48,12 +48,27 @@ if [ ! -e $APPS/nvim ]; then
 fi
 
 # Starship
-if [ ! -e $APPS/starship ]; then
+if [ ! -e $APPS/bin/starship ]; then
   echo "Installing starship"
-  mkdir $APPS/starship
-  curl -sS https://starship.rs/install.sh | sh -s -- --bin-dir=$APPS/starship -y
-
+  mkdir $APPS/bin
+  curl -sS https://starship.rs/install.sh | sh -s -- --bin-dir=$APPS/bin -y
 fi
+
+# Rust Analyzer
+if [ ! -e $APPS/bin/rust-analyzer ]; then
+  echo "Installing Rust Analyzer"
+  mkdir -p $APPS/bin
+  curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > $APPS/bin/rust-analyzer
+
+  chmod +x $APPS/bin/rust-analyzer
+fi
+
+
+
+
+
+
+
 # set git stuff
 git config --global user.name "Daniel Javorszky"
 git config --global user.email daniel.javorszky@gmail.com
