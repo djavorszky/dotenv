@@ -1,0 +1,2 @@
+export APPS=~/apps
+export PATH=$PATH:$APPS/nvim/bin

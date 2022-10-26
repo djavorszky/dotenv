@@ -1,1 +1,1 @@
-ubuntu-restricted-extras vim tmux vlc zsh libavcodec58 ffmpeg gstreamer1.0-libav
+vlc zsh tmux

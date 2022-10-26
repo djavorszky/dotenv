@@ -1,3 +1,7 @@
+APPS=~/apps
+
+mkdir -p $APPS
+
 # oh-my-zsh
 if [ ! -e ~/.oh-my-zsh ]; then
   echo "installing oh-my-zsh"
@@ -5,28 +9,45 @@ if [ ! -e ~/.oh-my-zsh ]; then
 fi
 
 
-
-# Install node:
-if [ ! -e ~/apps/node ]; then
+# Node:
+if [ ! -e $APPS/node ]; then
+  NODE_VERSION=v19.0.0
   echo "installing node"
-  mkdir -p ~/apps
-  cd ~/apps
 
-  curl -fsSL https://nodejs.org/dist/v17.5.0/node-v17.5.0-linux-x64.tar.xz -o node.tar.gz
+  cd $APPS
+
+  curl -fsSL https://nodejs.org/dist/$NODE_VERSION/node-$NODE_VERSION-linux-x64.tar.xz -o node.tar.gz
 
   tar xf node.tar.gz
   rm node.tar.gz
   mv node-* node
 fi
 
-if [ ! -e ~/.cargo]; then
-  mkdir -p ~/apps
-  cd ~/apps
+# Rust
+if [ ! -e ~/.cargo ]; then
+  cd $APPS
+
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -o rustup-install.sh
   chmod +x rustup-install.sh
   ./rustup-install.sh -y
   rm rustup-install.sh
 fi
+
+# Neovim
+if [ ! -e $APPS/nvim ]; then
+  echo "installing neovim"
+  cd $APPS
+
+  NVIM_VERSION=v0.8.0
+
+  curl -fsSL https://github.com/neovim/neovim/releases/download/$NVIM_VERSION/nvim-linux64.tar.gz -o nvim-linux64.tar.gz
+
+  tar xzf nvim-linux64.tar.gz
+  rm nvim-linux64.tar.gz
+  mv nvim-linux64 nvim
+fi
+
+# Starship
 
 # set git stuff
 git config --global user.name "Daniel Javorszky"

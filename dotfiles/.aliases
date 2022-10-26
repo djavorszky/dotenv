@@ -1,0 +1,3 @@
+
+alias cda="cd $APPS"
+alias vim=nvim
