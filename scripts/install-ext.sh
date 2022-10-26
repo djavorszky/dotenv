@@ -48,7 +48,12 @@ if [ ! -e $APPS/nvim ]; then
 fi
 
 # Starship
+if [ ! -e $APPS/starship ]; then
+  echo "Installing starship"
+  mkdir $APPS/starship
+  curl -sS https://starship.rs/install.sh | sh -s -- --bin-dir=$APPS/starship -y
 
+fi
 # set git stuff
 git config --global user.name "Daniel Javorszky"
 git config --global user.email daniel.javorszky@gmail.com

@@ -103,3 +103,4 @@ source $ZSH/oh-my-zsh.sh
 source ~/.exports
 source ~/.aliases
 
+eval "$(starship init zsh)"

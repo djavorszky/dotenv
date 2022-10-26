@@ -1,2 +1,2 @@
 export APPS=~/apps
-export PATH=$PATH:$APPS/nvim/bin
+export PATH=$PATH:$APPS/nvim/bin:$APPS/starship:$APPS/node/bin
