@@ -1,3 +1,4 @@
 
 alias cda="cd $APPS"
 alias vim=nvim
+alias ls=exa

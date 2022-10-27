@@ -1,1 +1,1 @@
-vlc zsh tmux
+vlc zsh tmux exa

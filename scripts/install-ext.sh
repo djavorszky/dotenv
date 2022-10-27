@@ -66,9 +66,6 @@ fi
 
 
 
-
-
-
 # set git stuff
 git config --global user.name "Daniel Javorszky"
 git config --global user.email daniel.javorszky@gmail.com
