@@ -60,7 +60,7 @@ if packer_bootstrap then
 end
 
 local set = vim.opt
-
+set.scrolloff = 5
 set.number = true
 set.rnu = true
 set.tabstop = 4
