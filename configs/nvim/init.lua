@@ -51,6 +51,10 @@ require("packer").startup(function(use)
 
   -- Some color scheme other then default
   use("arcticicestudio/nord-vim")
+
+  -- Shellcheck
+  use("itspriddle/vim-shellcheck")
+
 end)
 
 -- the first run will install packer and our plugins

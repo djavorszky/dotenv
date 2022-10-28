@@ -1,1 +1,5 @@
-vlc zsh tmux exa
+exa
+shellcheck
+tmux
+vlc
+zsh 
