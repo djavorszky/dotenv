@@ -1,0 +1,9 @@
+local set = vim.opt
+set.scrolloff = 5
+set.number = true
+set.rnu = true
+set.tabstop = 4
+set.shiftwidth = 4
+set.softtabstop = 0
+set.expandtab = false
+set.swapfile = false
