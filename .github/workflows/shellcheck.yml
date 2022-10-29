@@ -25,5 +25,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       - uses: ludeeus/action-shellcheck@1.1.0
+        with:
+          ignore: SC1071
 
 
