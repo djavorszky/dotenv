@@ -1,3 +1,5 @@
+#!/bin/bash
+
 APPS=~/apps
 
 mkdir -p $APPS
@@ -14,7 +16,7 @@ if [ ! -e $APPS/node ]; then
   NODE_VERSION=v19.0.0
   echo "installing node"
 
-  cd $APPS
+  cd $APPS || exit
 
   curl -fsSL https://nodejs.org/dist/$NODE_VERSION/node-$NODE_VERSION-linux-x64.tar.xz -o node.tar.gz
 
@@ -25,7 +27,7 @@ fi
 
 # Rust
 if [ ! -e ~/.cargo ]; then
-  cd $APPS
+  cd $APPS || exit
 
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -o rustup-install.sh
   chmod +x rustup-install.sh
@@ -36,7 +38,7 @@ fi
 # Neovim
 if [ ! -e $APPS/nvim ]; then
   echo "installing neovim"
-  cd $APPS
+  cd $APPS || exit
 
   NVIM_VERSION=v0.8.0
 
@@ -69,4 +71,4 @@ fi
 # set git stuff
 git config --global user.name "Daniel Javorszky"
 git config --global user.email daniel.javorszky@gmail.com
-git config --global core.editor "vim"
+git config --global core.editor "nvim"
