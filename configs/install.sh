@@ -1,7 +1,7 @@
 #!/bin/bash
 
-for d in `ls -d */`; do
-  echo "installing ${d}"
+for dir in */; do
+  echo "installing ${dir}"
   # d contains a trailing slash (/)
-  ./${d}install.sh
+  ./"${dir}"install.sh
 done
