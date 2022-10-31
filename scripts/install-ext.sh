@@ -65,3 +65,16 @@ if [ ! -e $APPS/bin/rust-analyzer ]; then
   chmod +x $APPS/bin/rust-analyzer
 fi
 
+# Twitch cli
+if [ ! -e $APPS/bin/twitch ]; then
+	echo "Installing Twitch CLI"
+	mkdir -p $APPS/bin
+
+	cd $APPS/bin || exit
+
+	curl -fsSL https://github.com/twitchdev/twitch-cli/releases/download/v1.1.12/twitch-cli_1.1.12_Linux_x86_64.tar.gz -o twitch.tar.gz
+	tar xzf twitch.tar.gz
+	rm twitch.tar.gz
+	mv twitch-cli*/twitch .
+	rm -rf twitch-cli*
+fi
