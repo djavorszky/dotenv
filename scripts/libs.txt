@@ -1,5 +1,7 @@
 exa
 jq
+libasound2-dev
+libudev-dev
 shellcheck
 tmux
 vlc
