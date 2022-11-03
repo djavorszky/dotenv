@@ -2,6 +2,7 @@ exa
 jq
 libasound2-dev
 libudev-dev
+podman
 shellcheck
 tmux
 vlc
