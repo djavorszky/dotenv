@@ -78,3 +78,10 @@ if [ ! -e $APPS/bin/twitch ]; then
 	mv twitch-cli*/twitch .
 	rm -rf twitch-cli*
 fi
+
+
+# flyctl
+if [ ! -e "$HOME/.fly" ]; then
+	curl -L https://fly.io/install.sh | sh
+fi
+
