@@ -1,9 +1,13 @@
+ca-certificates
+curl
 exa
+gnupg
 jq
 libasound2-dev
 libudev-dev
-podman
+lsb-release
 shellcheck
 tmux
 vlc
 zsh 
+    

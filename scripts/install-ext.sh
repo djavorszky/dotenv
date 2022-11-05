@@ -100,6 +100,7 @@ if [ ! -e "$APPS/bin/sccache" ]; then
 	chmod +x sccache
 fi
 
+# just
 if [ ! -e "$APPS/bin/just" ]; then
 	echo "Installing just"
 	mkdir -p $APPS/bin
@@ -107,4 +108,3 @@ if [ ! -e "$APPS/bin/just" ]; then
 	cd $APPS/bin || exit
 	curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to $APPS/bin
 fi
-
