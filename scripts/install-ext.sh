@@ -85,3 +85,26 @@ if [ ! -e "$HOME/.fly" ]; then
 	curl -L https://fly.io/install.sh | sh
 fi
 
+
+# sccache
+if [ ! -e "$APPS/bin/sccache" ]; then
+	echo "Installing sccache"
+	mkdir -p $APPS/bin
+
+	cd $APPS/bin || exit
+
+	curl -fsSL https://github.com/mozilla/sccache/releases/download/v0.3.0/sccache-v0.3.0-x86_64-unknown-linux-musl.tar.gz -o sccache.tar.gz
+	tar xzf sccache.tar.gz
+	mv sccache-*/sccache sccache
+	rm -rf sccache.tar.gz sccache-*
+	chmod +x sccache
+fi
+
+if [ ! -e "$APPS/bin/just" ]; then
+	echo "Installing just"
+	mkdir -p $APPS/bin
+
+	cd $APPS/bin || exit
+	curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to $APPS/bin
+fi
+
