@@ -6,6 +6,7 @@ jq
 libasound2-dev
 libudev-dev
 lsb-release
+ripgrep
 shellcheck
 tmux
 vlc
