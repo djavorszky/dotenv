@@ -44,7 +44,7 @@ require("packer").startup(function(use)
   -- Adds extra functionality over rust analyzer
   use("simrat39/rust-tools.nvim")
 
-  -- Optional
+  use("nvim-treesitter/nvim-treesitter")
   use("nvim-lua/popup.nvim")
   use("nvim-lua/plenary.nvim")
   use("nvim-telescope/telescope.nvim")
