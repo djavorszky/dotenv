@@ -108,3 +108,15 @@ if [ ! -e "$APPS/bin/just" ]; then
 	cd $APPS/bin || exit
 	curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to $APPS/bin
 fi
+
+# go
+if [ ! -e "$APPS/go" ]; then
+	echo "Installing Go"
+	mkdir -p $APPS
+
+	cd $APPS || exit
+	curl -fsSL https://go.dev/dl/go1.19.3.linux-amd64.tar.gz -o go.tar.gz
+	tar xzf go.tar.gz
+	rm go.tar.gz
+fi
+

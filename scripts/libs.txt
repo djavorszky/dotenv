@@ -5,6 +5,7 @@ gnupg
 jq
 libasound2-dev
 libudev-dev
+libssl-dev
 lsb-release
 ripgrep
 shellcheck

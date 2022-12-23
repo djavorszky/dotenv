@@ -1,5 +1,5 @@
 export APPS=~/apps
-export PATH=$PATH:$APPS/nvim/bin:$APPS/bin:$APPS/node/bin
+export PATH=$PATH:$APPS/nvim/bin:$APPS/bin:$APPS/node/bin:$APPS/go/bin
 
 export FLYCTL_INSTALL="/home/djavorszky/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
